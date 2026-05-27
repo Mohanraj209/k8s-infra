@@ -994,7 +994,7 @@
       "pluginVersion": "12.4.1",
       "targets": [
         {
-          "expr": "{namespace=~\"$namespace\", level=\"ACCESS\"} | json | timeTaken > 1000 | line_format \"[{{.statusCode}}] {{.timeTaken}}s | {{.req_requestURI}} | trace={{.traceId}}\"",
+          "expr": "{namespace=~\"$namespace\", level=\"ACCESS\"} | json | timeTaken > 1000 | line_format \"[{{.statusCode}}] {{.timeTaken}}ms | {{.req_requestURI}} | trace={{.traceId}}\"",
           "refId": "A"
         }
       ],

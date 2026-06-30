@@ -42,7 +42,7 @@ aws route53 list-hosted-zones
 
 1. **Install Certbot**: Follow the instructions [here](https://certbot.eff.org/instructions) to install `certbot` for your nginx server.
 2. **Configure AWS Route 53**: Ensure your domain's DNS is managed by AWS Route 53 and that you have the necessary permissions to perform DNS validation.
-3. **Install AWS CLI**: 
+3. **Install AWS CLI**:
     ```sh
     sudo apt update
     sudo apt install unzip curl -y 

@@ -32,6 +32,18 @@
         port: 9099
         proto: tcp
 
+    - name: node-exporter
+      community.general.ufw:
+        rule: allow
+        port: 9100
+        proto: tcp
+
+    - name: kube-proxy
+      community.general.ufw:
+        rule: allow
+        port: 10249
+        proto: tcp
+
     # - name: Prometheus metrics
     #   community.general.ufw:
     #     rule: allow
@@ -83,6 +95,19 @@
         proto: tcp
     - community.general.ufw:
         state: enabled
+
+    - name: kube-controller-manager
+      community.general.ufw:
+        rule: allow
+        port: 10257
+        proto: tcp
+
+    - name: kube-scheduler
+      community.general.ufw:
+        rule: allow
+        port: 10259
+        proto: tcp
+
 - hosts: etcd
   become: true
   tasks:

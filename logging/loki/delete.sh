@@ -28,7 +28,7 @@ error()   { echo -e "${RED}[ERROR]${NC}   $*" >&2; exit 1; }
 # =============================================================================
 # CONFIGURATION — must match install.sh
 # =============================================================================
-NAMESPACE="loki-monitoring"
+NAMESPACE="logging"
 
 # Helm releases in REVERSE order of install (uninstall dependents first)
 RELEASES=(istio-addons alloy grafana loki)
